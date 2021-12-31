@@ -87,7 +87,7 @@ update=$(curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/$zone_identi
     -H "X-Auth-Email: $auth_email" \
     -H "X-Auth-Key: $auth_key" \
     -H "Content-Type: application/json" \
-    --data "{\"type\":\"$record_type\",\"name\":\"$record_name\",\"content\":\"$ip\",\"ttl\":1,\"proxied\":false}")
+    --data '{"type":"'$record_type'", "name":"'$record_name'", "content":"'$ip'", "ttl":120, "proxied":false}')
 
 
 #反馈更新情况 gave the feedback about the update statues
